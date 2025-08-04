@@ -102,10 +102,87 @@ h1 {
     font-size: 1.2em;
 }
 
-/* Skills Section */
-#skills {
+/* What I Offer Section */
+#what-i-offer {
     background-color: #2b2b2b;
     padding: 50px 0;
+}
+
+#what-i-offer h2 {
+    font-size: 2.5em;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#what-i-offer p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #ddd;
+    margin-bottom: 40px;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+
+.service {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    text-align: center;
+    cursor: pointer;
+    position: relative; /* Position relative to container */
+}
+
+.service:hover {
+    transform: scale(1.05);
+}
+
+.service i {
+    font-size: 4em;
+    color: #ff5722;
+    margin-bottom: 15px;
+}
+
+.service h3 {
+    font-size: 1.5em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Service Details Popup */
+.service-details {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position pop-up below the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 100%; /* Match the container width */
+    background: rgba(0, 0, 0, 0.9); /* Darker background */
+    color: #fff;
+    padding: 20px;
+    font-size: 1.2em;
+    text-align: center;
+    border-radius: 8px;
+    z-index: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.service-details.active {
+    display: block;
+}
+
+/* Skills Section */
+#skills {
+    padding: 50px 0;
+    background-color: #1e1e1e;
 }
 
 #skills h2 {
@@ -137,6 +214,7 @@ h1 {
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease;
+    position: relative; /* Position relative to container */
 }
 
 .skills-category:hover {
@@ -150,22 +228,73 @@ h1 {
 }
 
 .skills-category h3 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #fff;
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
+/* Skill Details Popup */
 .skill-details {
     display: none;
+    position: absolute;
+    top: 100%; /* Position pop-up below the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 100%; /* Match the container width */
+    background: rgba(0, 0, 0, 0.9); /* Darker background */
+    color: #fff;
     padding: 20px;
-    background-color: #333;
-    color: #ddd;
-    margin-top: 10px;
+    font-size: 1.2em;
+    text-align: center;
     border-radius: 8px;
+    z-index: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 .skill-details.active {
     display: block;
+}
+
+/* Education Section */
+#education {
+    background-color: #2b2b2b;
+    padding: 50px 0;
+}
+
+#education h2 {
+    font-size: 2.5em;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.education-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Degree and Certificates side by side */
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.degree, .certificates {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.degree h3, .certificates h3 {
+    font-size: 1.8em;
+    color: #ff5722;
+}
+
+.certificates ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.certificates ul li {
+    font-size: 1.2em;
+    color: #ddd;
 }
 
 /* Projects Section */
@@ -225,13 +354,6 @@ h1 {
     color: #fff; /* Change text color on hover */
 }
 
-/* Make the projects grid responsive for smaller screens */
-@media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: 1fr; /* Stack the project cards vertically */
-    }
-}
-
 /* Contact Section */
 #contact {
     background-color: #2b2b2b;
@@ -287,116 +409,53 @@ form button {
 
 form button:hover {
     background-color: #e64a19;
-} 
-
-/* What I Offer Section */
-#what-i-offer {
-    background-color: #2b2b2b;
-    padding: 50px 0;
 }
 
-#what-i-offer h2 {
-    font-size: 2.5em;
-    color: #fff;
-    text-align: center;
-    margin-bottom: 40px;
+/* Responsive Layout for Skills and Education */
+@media (max-width: 1024px) {
+    .skills-container {
+        grid-template-columns: 1fr 1fr; /* 2 columns layout on medium screens */
+        grid-template-rows: repeat(3, 1fr); /* Adjust for 3 rows */
+    }
+
+    .skills-category {
+        width: 100%;
+    }
+
+    .education-details {
+        grid-template-columns: 1fr; /* Stack degree and certificates on medium screens */
+        gap: 20px;
+    }
+
+    .degree, .certificates {
+        width: 100%;
+    }
 }
 
-#what-i-offer p {
-    text-align: center;
-    font-size: 1.2em;
-    color: #ddd;
-    margin-bottom: 40px;
-}
+@media (max-width: 768px) {
+    /* Skills Section */
+    .skills-container {
+        grid-template-columns: 1fr; /* Stack skills in a single column on mobile screens */
+    }
 
-.service-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+    .skills-category i {
+        font-size: 3em; /* Slightly smaller icons */
+    }
 
-.service {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    width: 22%;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
+    .skills-category h3 {
+        font-size: 1.1em;
+    }
 
-.service:hover {
-    transform: scale(1.05);
-}
+    .overlay {
+        font-size: 1em;
+    }
 
-.service i {
-    font-size: 4em;
-    color: #ff5722;
-    margin-bottom: 15px;
-}
+    /* Education Section */
+    .education-details {
+        grid-template-columns: 1fr; /* Stack degree and certificates vertically on mobile */
+    }
 
-.service h3 {
-    font-size: 1.5em;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-/* Service Details */
-.service-details {
-    display: none;
-    padding: 20px;
-    background-color: #333;
-    color: #ddd;
-    margin-top: 10px;
-    border-radius: 8px;
-    transition: max-height 0.3s ease-out;
-}
-
-.service-details.active {
-    display: block;
-}
-
-/* Education Section */
-#education {
-    background-color: #2b2b2b;
-    padding: 50px 0;
-}
-
-#education h2 {
-    font-size: 2.5em;
-    color: #fff;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.education-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.degree, .certificates {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 8px;
-    width: 80%;
-    margin: 10px;
-    text-align: center;
-}
-
-.degree h3, .certificates h3 {
-    font-size: 1.8em;
-    color: #ff5722;
-}
-
-.certificates ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.certificates ul li {
-    font-size: 1.2em;
-    color: #ddd;
+    .degree, .certificates {
+        width: 100%;
+    }
 }
