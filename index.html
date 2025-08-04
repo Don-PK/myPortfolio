@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Kirira Ndiritu - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <!-- Profile Section -->
+            <div class="profile-section">
+                <div class="profile-img">
+                    <img src="kirira.jpg" alt="Paul Kirira Ndiritu">
+                </div>
+                <div class="profile-text">
+                    <h1>Hello, I'm Paul Kirira Ndiritu</h1>
+                    <p class="typing">Software Engineer | Data Analyst | Web Developer</p>
+                    <div class="cta-container">
+                        <a href="#projects" class="cta-btn">Get a project</a>
+                        <a href="Paul_Kirira_Ndiritu_CV.pdf" class="cta-btn" target="_blank">Download CV</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="about-section">
+                <h2>About Me</h2>
+                <p>I’m a passionate software engineer and data analyst, specializing in web applications, data analysis, and solutions that drive business growth...</p>
+                <div class="stats">
+                    <div class="stat">
+                        <h3>70+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat">
+                        <h3>95%</h3>
+                        <p>Client Satisfaction</p>
+                    </div>
+                    <div class="stat">
+                        <h3>5+</h3>
+                        <p>Years of Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- What I Offer Section -->
+    <section id="what-i-offer">
+        <div class="container">
+            <h2>What I Offer</h2>
+            <p>As a seasoned software engineer and data analyst, I offer the following professional services to businesses and individuals:</p>
+
+            <div class="service-container">
+                <!-- Service 1: Software Development for Business Solutions -->
+                <div class="service" onclick="toggleService('software')">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Software Development for Business Solutions</h3>
+                </div>
+                <div class="service-details" id="software">
+                    <p>I design and develop software solutions tailored to your business needs, ensuring seamless integration with existing processes. Whether you're looking to streamline operations, automate tasks, or create custom applications, I provide scalable and reliable solutions that enhance productivity and drive business success.</p>
+                </div>
+
+                <!-- Service 2: Research (Qualitative and Quantitative) -->
+                <div class="service" onclick="toggleService('research')">
+                    <i class="fas fa-search"></i>
+                    <h3>Research (Qualitative and Quantitative)</h3>
+                </div>
+                <div class="service-details" id="research">
+                    <p>I offer comprehensive research services in both qualitative and quantitative methodologies. With a strong foundation in research design, data collection, and analysis, I help businesses make informed decisions backed by solid data and actionable insights.</p>
+                </div>
+
+                <!-- Service 3: Data Collection -->
+                <div class="service" onclick="toggleService('dataCollection')">
+                    <i class="fas fa-database"></i>
+                    <h3>Data Collection</h3>
+                </div>
+                <div class="service-details" id="dataCollection">
+                    <p>With my expertise in data collection, I help clients gather reliable, high-quality data. Whether it’s for market research, academic studies, or business analysis, I ensure the collection process is accurate and efficient, providing data you can trust.</p>
+                </div>
+
+                <!-- Service 4: Data Analysis -->
+                <div class="service" onclick="toggleService('dataAnalysis')">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Data Analysis</h3>
+                </div>
+                <div class="service-details" id="dataAnalysis">
+                    <p>With advanced knowledge in statistical modeling and analysis tools such as Python, R, and SQL, I offer in-depth data analysis services. I identify patterns, trends, and correlations that lead to actionable insights, helping businesses optimize their strategies and improve decision-making.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <p>Explore the wide range of skills I offer. Click on each category to see more details about the tools and technologies I am proficient in.</p>
+
+            <div class="skills-container">
+                <!-- Basic Computing -->
+                <div class="skills-category" onclick="toggleSkillDetails('basicComputing')">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Basic Computing</h3>
+                </div>
+                <div class="skill-details" id="basicComputing">
+                    <p>Proficient in using essential office software to enhance productivity: Microsoft Word, Excel, PowerPoint, Project, and Access. These tools are fundamental for creating professional documents, analyzing data, and managing projects effectively.</p>
+                </div>
+
+                <!-- Software Development -->
+                <div class="skills-category" onclick="toggleSkillDetails('softwareDevelopment')">
+                    <i class="fas fa-code"></i>
+                    <h3>Software Development</h3>
+                </div>
+                <div class="skill-details" id="softwareDevelopment">
+                    <p>Experienced in software development using various programming languages and frameworks: HTML, CSS, JavaScript, Python, Java, C++, and React. I create dynamic, user-friendly web applications and software solutions tailored to client needs.</p>
+                </div>
+
+                <!-- Data Collection -->
+                <div class="skills-category" onclick="toggleSkillDetails('dataCollection')">
+                    <i class="fas fa-database"></i>
+                    <h3>Data Collection</h3>
+                </div>
+                <div class="skill-details" id="dataCollection">
+                    <p>Skilled in data collection using tools like SurveyMonkey, Google Forms, and SurveyToGo. I ensure the collection of accurate, reliable, and relevant data for research or business analysis projects.</p>
+                </div>
+
+                <!-- Data Analysis -->
+                <div class="skills-category" onclick="toggleSkillDetails('dataAnalysis')">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Data Analysis</h3>
+                </div>
+                <div class="skill-details" id="dataAnalysis">
+                    <p>Proficient in data analysis using R, Python, Excel, and SPSS. I conduct in-depth analysis, identify trends, and provide actionable insights to help businesses make informed decisions.</p>
+                </div>
+
+                <!-- Data Visualization -->
+                <div class="skills-category" onclick="toggleSkillDetails('dataVisualization')">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Data Visualization</h3>
+                </div>
+                <div class="skill-details" id="dataVisualization">
+                    <p>Experienced in using data visualization tools such as Tableau, Python (Matplotlib, Seaborn), R, and Power BI. I help clients transform complex data into visually compelling and easy-to-understand visualizations.</p>
+                </div>
+
+                <!-- Database Management -->
+                <div class="skills-category" onclick="toggleSkillDetails('databaseManagement')">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Database Management</h3>
+                </div>
+                <div class="skill-details" id="databaseManagement">
+                    <p>Expert in database management using tools like Metabase, MySQL, Access, and RapidPro. I help manage, organize, and optimize databases to ensure efficiency and scalability in data storage and retrieval.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-details">
+                <div class="degree">
+                    <h3>Bachelor of Science in Applied Statistics with Computing</h3>
+                    <p><strong>Moi University</strong> – 2016</p>
+                    <p>This degree provided me with the necessary skills to perform statistical analysis and apply computing techniques to solve complex data problems. I specialized in data collection, analysis, and statistical modeling.</p>
+                </div>
+
+                <div class="certificates">
+                    <h3>Professional Certificates</h3>
+                    <ul>
+                        <li><strong>Research Survey Designs in Marketing Research</strong></li>
+                        <li><strong>Machine Learning and Application R and Python</strong></li>
+                        <li><strong>Data Visualization and Exploration R and Python</strong></li>
+                        <li><strong>Java Development for Software Solutions</strong> (Certificate in Java Programming)</li>
+                        <li><strong>HTML & CSS for Web Development</strong> (Certificate in Web Development)</li>
+                        <li><strong>Python for Data Science and Automation</strong> (Certificate in Python Programming)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Project 1: Caregiving Appraisal Study</h3>
+                <p><strong>Objective:</strong> To assess the psychological impact of caregiving in pediatric leukemia.</p>
+                <p><strong>Problem:</strong> Caregivers experience high stress, affecting their well-being and caregiving capacity.</p>
+                <p><strong>Solution:</strong> Data analysis using SPSS and R to identify influencing factors.</p>
+                <p><strong>Results:</strong> Identified key factors predicting caregiver distress and satisfaction.</p>
+                <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0324589" target="_blank" class="cta-btn">View</a>
+            </div>
+            <div class="project-card">
+                <h3>Project 2: E-Commerce Platform</h3>
+                <p><strong>Objective:</strong> Build a scalable online store with key features.</p>
+                <p><strong>Problem:</strong> Many small businesses lack effective online platforms for sales.</p>
+                <p><strong>Solution:</strong> Developed an e-commerce platform with inventory and payment system integration.</p>
+                <p><strong>Results:</strong> Delivered a functional platform with user-friendly interfaces and secure payments.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>If you'd like to discuss a potential collaboration, project, or just want to connect, feel free to reach out!</p>
+            <div class="contact-info">
+                <a href="https://x.com/Don_Kirira" class="contact-icon" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="https://wa.me/0741105701" class="contact-icon" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://www.linkedin.com/in/paulkirira" class="contact-icon" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+            <form action="mailto:nkirira@gmail.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="5" placeholder="Please include details about your inquiry or project request. Feel free to share as much as you'd like." required></textarea>
+                </div>
+                <button type="submit" class="cta-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Paul Kirira Ndiritu | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        const app = document.querySelector(".typing");
+        const typewriter = new Typewriter(app, { loop: true, delay: 75 });
+        typewriter
+            .typeString("Software Engineer | Data Analyst | Web Developer")
+            .pauseFor(1500)
+            .deleteAll()
+            .start();
+
+        // Toggle service details visibility on click
+        function toggleService(service) {
+            const serviceDetails = document.getElementById(service);
+            serviceDetails.classList.toggle('active');
+        }
+
+        // Toggle skill details visibility on click
+        function toggleSkillDetails(skill) {
+            const skillDetails = document.getElementById(skill);
+            skillDetails.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
